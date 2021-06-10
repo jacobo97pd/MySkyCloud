@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('partials/head'); %>
+		<nav>
+			<header>
+				<div class="imageheader">
+					<a href="/" , title="Inicio">
+						<img src="/img/Logo_Mysky_Javi.png" alt="Inicio" width="120" height="80">
+					</a>
+				</div>
+				<div class="texto">Crear cuenta en My Sky</div>
+			</header>
+			<title>Registro</title>
+		</nav>
+</head>
+
+<body class="body"><br><br>
+	<div class="descripcion">
+		Rellene el formulario para crear una cuenta en My Sky.
+	</div>
+	<div class="container">
+		<div class="col-sm-6 mx-auto">
+			<div class="card-body">
+				<div id="error" class="alert alert-danger ocultar" role="alert">
+					Las Contraseñas no coinciden. Intentelo de nuevo.
+				</div>
+				<div id="ok" class="alert alert-success ocultar" role="alert">
+					Registro completado. Procesando...
+				</div>
+				<!-- Si existe algun error, me lo muestra -->
+				<% if (message.length> 0) { %>
+					<div class="alert alert-danger" role="alert">
+						<%= message %>
+					</div>
+					<% } %>
+						<form id="formSignUp" onsubmit="verificarPasswords(); return false" action="/signup"
+							method="POST">
+							<div class="form-group">
+								<input type="email" name="email" placeholder="email" required="required"
+									class="input"></input><br><br>
+							</div>
+							<div class="form-group">
+								<label for="pass1"></label>
+								<input id="pass1" type="password" name="password1" placeholder="Contraseña"
+									required="required" class="input"></input><br><br>
+							</div>
+							<div class="form-group">
+								<label for="pass2"></label>
+								<input id="pass2" type="password" name="password" placeholder="Repita contraseña"
+									required="required" class="input"></input><br><br>
+							</div>
+							<!--
+								<div id="error" class="alert alert-danger ocultar" role="alert">
+									Las Contraseñas no coinciden, vuelve a intentar !
+								</div>
+								<div id="ok" class="alert alert-success ocultar" role="alert">
+									Las Contraseñas coinciden ! (Procesando formulario ... )
+								</div>
+								-->
+							<script type="text/javascript">
+
+								function verificarPasswords() {
+
+									// Ontenemos los valores de los campos de contraseñas 
+									pass1 = document.getElementById('pass1');
+									pass2 = document.getElementById('pass2');
+
+									// Verificamos si las constraseñas no coinciden 
+									if (pass1.value != pass2.value) {
+
+										// Si las constraseñas no coinciden mostramos un mensaje 
+										document.getElementById("error").classList.add("mostrar");
+
+										return false;
+									}
+
+									else {
+
+										// Si las contraseñas coinciden ocultamos el mensaje de error
+										document.getElementById("error").classList.remove("mostrar");
+										// Mostramos un mensaje mencionando que las Contraseñas coinciden 
+										document.getElementById("ok").classList.remove("ocultar");
+
+										// Desabilitamos el botón de login 
+										document.getElementById("login").disabled = true;
+										return true;
+									}
+
+								}
+
+							</script><br>
+							<div style="text-align:center;">
+								<input type="submit" value="Aceptar" class="button">
+							</div>
+						</form>
+						<hr>
+						<div class="text-center">
+							<p>¿Tienes ya una cuenta? <a href="/login">Inicia sesion</a></p>
+							<p>Volver a <a href="/">inicio</a></p>
+						</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<footer>
+		<p>Copyright &copy;2021 | Propiedad de Jacobo Pedrero Dugnol</a></p>
+	</footer>
+</body>
+
+</html>

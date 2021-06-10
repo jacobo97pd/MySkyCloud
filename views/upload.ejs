@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('partials/head'); %>
+		<nav>
+			<div class="imageheader">
+				<a href="/profile" title="Perfil">
+					<img src="/img/Logo_Mysky_Javi.png" alt="Perfil" width="120" height="80">
+				</a>
+			</div>
+			<form action="/logout" method="GET">
+				<div class="logout">
+					<div style="text-align:center;">
+						<input type="submit" value="Cerrar sesion" class="button">
+					</div>
+				</div>
+			</form>
+			<div class="logout">
+				<div style="text-align:center;">
+					<a href="/profile" class="button">Volver</a>
+				</div>
+			</div>
+			<div class="texto">Cargar archivos</div>
+			<title>Subir archivos</title>
+		</nav>
+</head>
+
+<body class="profile">
+	<!-- <div class="loader"></div> -->
+	<div class="descripcion">
+		<p>Seleccione los archivos que quiere subir al servidor.</p><br><br>
+		<form action="/upload" enctype="multipart/form-data" method="POST">
+			<input type="file" name="file" value="Subir" multiple />
+			<input type="submit" value="Subir" /><br><br>
+			<input type="reset" value="Cancelar" />
+			<!-- <script type="text/javascript">
+			$(window).load(function () {
+				$(".loader").fadeOut("slow");
+			});
+		</script> -->
+		</form>
+	</div><br><br><br><br><br><br><br><br><br><br><br><br>
+	<footer>
+		<p>Copyright &copy;2021 | Propiedad de Jacobo Pedrero Dugnol</a></p>
+	</footer>
+</body>
+
+</html>

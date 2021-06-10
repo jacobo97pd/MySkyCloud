@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('partials/head'); %>
+		<nav>
+			<header>
+				<div class="imageheader">
+					<a href="/" , title="Inicio">
+						<img src="/img/Logo_Mysky_Javi.png" alt="Inicio" width="120" height="80">
+					</a>
+				</div>
+				<div class="texto">Inicia sesion</div>
+			</header>
+			<title>Login</title>
+		</nav>
+</head>
+
+<body class="body"><br><br>
+	<div class="descripcion">
+		Indroduzca sus credenciales para iniciar sesion.
+	</div>
+	<div class="container">
+		<div class="col-sm-6 mx-auto">
+			<div class="card-body">
+				<!-- Si existe algun error, me lo muestra -->
+				<% if (message.length) { %>
+					<div class="alert alert-danger" role="alert">
+						<%= message %>
+					</div>
+					<% } %>
+						<form action="/login" method="POST" name="formLogin" , onsubmit="procesar()">
+							<div class="form-group">
+								<input id="email" type="email" name="email" placeholder="email" required="required"
+									class="input"></input><br><br>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" placeholder="Contraseña" required="required"
+									class="input"></input>
+							</div><br>
+							<div style="text-align:center;">
+								<input type="submit" value="Aceptar" class="button">
+							</div>
+						</form>
+						<hr>
+						<div class="text-center">
+							<p>¿Necesitas una cuenta? <a href="/signup">Registrarse</a></p>
+							<p>Volver a <a href="/">inicio</a></p>
+						</div>
+			</div>
+
+		</div>
+	</div><br><br><br><br><br><br><br><br><br><br><br><br>
+	<footer>
+		<p>Copyright &copy;2021 | Propiedad de Jacobo Pedrero Dugnol</a></p>
+	</footer>
+</body>
+
+</html>

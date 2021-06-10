@@ -1,0 +1,201 @@
+/*@media only screen and (min-device-width: 960px) and (min-width:320px) and (max-width:480px){*/
+
+nav {
+	/*background-color: rgba(0, 0, 0, .5);*/
+	background-color: rgba(0, 35, 83, 0.74);
+	box-shadow: 2px 2px 10px rgb(0, 0, 0);
+	display: inline-block;
+	height: auto;
+}
+
+nav .texto {
+	font-size: 2.8rem;
+	text-align: center;
+	padding: 3%;
+	margin-right: 30%;
+	margin-left: 30%;
+	color: rgb(223, 223, 223);
+}
+
+nav .imageheader {
+	height: auto;
+	padding: 2%;
+	float: left;
+}
+
+.body {
+	/*background-color: rgb(26, 26, 26);*/
+	/*background-image: linear-gradient( 135deg, #1b1b1b 10%, #777777 100%);*/
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	text-align: center;
+}
+
+.profile {
+	/*background-color: rgb(26, 26, 26);*/
+	/*background-image: linear-gradient( 135deg, #1b1b1b 10%, #777777 100%);*/
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/sky3.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	text-align: center;
+}
+
+.descripcion {
+	font-size: 1.2em;
+	text-align: center;
+	padding: 50px;
+	width: 50%;
+	margin: auto;
+	color: rgb(220, 220, 220);
+}
+/*
+.archivos {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+*/
+
+footer {
+	/*background-image: linear-gradient( 135deg, #7f7f7f 10%, #000000 100%);*/
+	box-shadow: 2px 2px 10px rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, .5);
+	justify-content: center;
+	/*bottom: 0;*/
+	position: absolute;
+	width: 100%;
+	padding: 1%;
+}
+
+p {
+	color: rgb(220, 220, 220);
+	text-align: center;
+}
+
+.input{
+	background: #f1f1f1;
+	border-left: 5px solid #1883ba;
+	border-radius: 8px;
+	outline: none;
+	min-width: 50%;
+	width: fit-content;
+	height: fit-content;
+}
+
+.button {
+	text-decoration: none;
+	padding: 3px;
+	width: fit-content;
+	height: fit-content;
+	font-size: 1.2rem;
+	color: #ffffff;
+	background-color: #1b90ca9c;
+	border-radius: 6px;
+}
+
+.button:hover{
+	color: #1883ba;
+	background-color: #ffffff;
+}
+
+div {
+	/*background-color: transparent !important;*/
+	color: rgb(255, 255, 255);
+}
+/*
+div.avatar {
+	height: 200px;
+	width: 200px;
+	margin-right: 30px;
+	margin-left: 30px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 50%;
+	background-size: 100% auto;
+}
+*/
+div.logout {
+	padding: 2%;
+	float: right;
+}
+
+div.volver {
+	max-width: 100%;
+	height: auto;
+	padding: 15px;
+	float: none;
+	margin-bottom: 4%;
+}
+
+div.iconos {
+	/* cambia estos dos valores para definir el tamaño de tu círculo */
+	height: 100px;
+	width: 100px;
+	margin: 50px;
+	display: inline-block;
+	justify-content: center;
+	/* los siguientes valores son independientes del tamaño del círculo */
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 100%;
+	background-size: 120% auto;
+}
+
+h1.texto {
+	text-align: center;
+	margin: 0 auto;
+}
+
+table.files {
+	border-collapse: collapse;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
+table.main {
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
+tr {
+	font-size: 1.2em;
+	color: white;
+	align-content: center;
+}
+
+th {
+	font-size: 1.2em;
+	padding: 1%;
+}
+
+td {
+	text-align: center;
+	padding: 1%;
+}
+
+img .files{
+	max-width: 100%;
+	height: auto;
+}
+
+.thumb {
+	height: 75px;
+	border: 1px solid #000;
+	margin: 10px 5px 0 0;
+}
+
+.ocultar {
+	display: none;
+}
+
+.mostrar {
+	display: block;
+}

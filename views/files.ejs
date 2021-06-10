@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('partials/head'); %>
+		<nav>
+			<div class="imageheader">
+				<a href="/profile" title="Perfil">
+					<img src="/img/Logo_Mysky_Javi.png" alt="Perfil" width="120" height="80">
+				</a>
+			</div>
+			<form action="/logout" method="GET">
+				<div class="logout">
+					<div style="text-align:center;">
+					</div>
+				</div>
+			</form>
+			<div class="logout">
+				<div style="text-align:center;">
+					<a href="/profile" class="button">Volver</a>
+				</div>
+			</div>
+			<div class="texto">Mis archivos</div>
+			<title>Mis archivos</title>
+		</nav>
+</head>
+
+<body class="profile">
+	<div style="text-align:center;"><br><br><br>
+		<table class="files">
+			<tr>
+				<th>
+					<img src="/img/photo.png" alt="Mis fotos" class="files" width="170px" height="170px">
+				</th>
+				<th>
+					<img src="/img/video2.png" alt="Mis videos" class="files" width="170px" height="170px">
+				</th>
+				<th>
+					<img src="/img/files2.png" alt="Mis archivos" class="files" width="170px" height="170px">
+				</th>
+				<th>
+					<img src="/img/music.png" alt="Mi musica" class="files" width="170px" height="170px">
+				</th>
+				<!-- <th>${fileJson}</th> -->
+			</tr>
+			<tr>
+				<th>Mis fotos</th>
+				<th>Mis videos</th>
+				<th>Mis archivos</th>
+				<th>Mi musica</th>
+			</tr>
+			<tr>
+				<th>
+					<% images.forEach(function(images) { %>
+						<li>
+							<%= images.id %>
+						</li>
+						<p>
+							Nombre <%= images.name %>
+						</p>
+						<p>
+							<a href="<%= images.url %>">Descargar</a>
+						</p>
+						<% }); %>
+				</th>
+				<th>
+					<% videos.forEach(function(videos) { %>
+						<li>
+							<%= videos.id %>
+						</li>
+						<p>
+							Nombre <%= videos.name %>
+						</p>
+						<p>
+							<a href="<%= videos.url %>">Descargar</a>
+						</p>
+						<% }); %>
+				</th>
+				<th>
+					<% ficheros.forEach(function(ficheros) { %>
+						<li>
+							<%= ficheros.id %>
+						</li>
+						<p>
+							Nombre <%= ficheros.name %>
+						</p>
+						<p>
+							<a href="<%= ficheros.url %>">Descargar</a>
+						</p>
+						<% }); %>
+				</th>
+				<th>
+					<% music.forEach(function(music) { %>
+						<li>
+							<%= music.id %>
+						</li>
+						<p>
+							Nombre <%= music.name %>
+						</p>
+						<p>
+							<a href="<%= music.url %>">Descargar</a>
+						</p>
+						<% }); %>
+				</th>
+			</tr>
+		</table>
+	</div><br><br><br><br><br><br><br><br><br><br><br><br>
+	<footer>
+		<p>Copyright &copy;2021 | Propiedad de Jacobo Pedrero Dugnol</a></p>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+	<script type="text/javascript" src="/js/showFiles.js"></script>
+</body>
+
+</html>

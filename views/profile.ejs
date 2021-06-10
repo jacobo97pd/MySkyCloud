@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('partials/head'); %>
+		<nav>
+			<div class="imageheader">
+				<a href="/profile" title="Perfil">
+					<img src="/img/Logo_Mysky_Javi.png" alt="profile" width="120" height="80">
+				</a>
+			</div>
+			<form action="/logout" method="GET">
+				<div class="logout">
+					<div style="text-align:center;">
+						<input type="submit" value="Cerrar sesion" class="button">
+					</div>
+				</div>
+			</form>
+			<form action="/files" method="GET">
+				<div class="logout">
+					<div style="text-align:center;">
+						<input type="submit" value="Ver archivos guardados" class="button">
+					</div>
+				</div>
+			</form>
+			<div class="texto">Bienvenido <%= user %>!</div>
+			<title>Profile</title>
+		</nav>
+</head>
+
+<body class="profile">
+	<div class="descripcion"><br><br><br>
+		<table class="main">
+			<tr>
+				<th scope="col">
+					<a href="/upload">
+						<img src="/img/upload3.png">
+					</a>
+				</th>
+				<th scope="col">
+					<a href="/files">
+						<img src="/img/download3.png">
+					</a>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					Subir archivos
+				</th>
+				<th>
+					Descargar archivos
+				</th>
+			</tr>
+		</table>
+	</div><br><br><br><br><br><br><br><br><br><br><br><br>
+	<footer>
+		<p>Copyright &copy;2021 | Propiedad de Jacobo Pedrero Dugnol</a></p>
+	</footer>
+</body>
+
+</html>
